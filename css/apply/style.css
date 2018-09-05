@@ -1,0 +1,39 @@
+#button-information{
+    background-color: white;
+    color: blue;
+    font-size: 40pt;
+    width: 100px;
+    height: 100px;
+}
+
+#collapseInformation .card-body{
+    font-size: 16pt;
+    font-weight: lighter;
+}
+#form-apply label{
+    font-size: 16pt;
+    font-weight: normal;
+}
+
+#apply-true i{
+    color: green;
+    font-weight: lighter;
+    font-size: 200pt;
+    margin-bottom: 50px;
+}
+#apply-true p{
+    font-weight: normal;
+    font-size: 24pt;
+}
+
+#apply-false i{
+    color: red;
+    font-weight: lighter;
+    font-size: 200pt;
+    margin-bottom: 50px;
+}
+
+#apply-false p{
+    font-weight: normal;
+    font-size: 24pt;
+}

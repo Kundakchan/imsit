@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>IMSIT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../css/home.css">
+    <link rel="stylesheet" href="../../../css/left_nav.css">
+    <link rel="stylesheet" href="../../../css/apply/style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-2 fixed-top" id="box"></div>
+        <div class="col-2"></div>
+        <div class="col contentt">
+            <div class="row mt-5 ml-5 mr-5">
+                <div class="col">
+                    <button id="button-information" class="btn border border-primary rounded-circle" type="button" data-toggle="collapse" data-target="#collapseInformation" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fas fa-info"></i>
+                    </button>
+
+                    <div class="collapse mt-3 show" id="collapseInformation">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h4>Небольшая инструкция</h4>
+                            </div>
+                            <div class="card-body">
+                                <p>В данном раздели вы можите оставить заявку на обслуживаки компьютерной и оргтехники для этого вам необходима:</p>
+                                <p>- выбрать из списка наиболее подходяший тип проблеммы</p>
+                                <p>- указать критичность выполнения заявки</p>
+                                <p>- указат адрес где необходима устранить проблему</p>
+                                <p>- описать максимально подробно требования к заявки</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <h4>Чтобы скрыть данную инструкцию нажмите на иконку "info" расположенную выше</h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 ml-5 mr-5">
+                <div class="col">
+                    <hr>
+                    <form id="form-apply">
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="typeError">Выбирете тип проблемы</label>
+                                <select id="typeError" class="form-control apply-data" name="type">
+                                    <option value="Не работаек компьютер">Не работаек компьютер</option>
+                                    <option value="Не работаек ПО">Не работаек ПО</option>
+                                    <option value="Не работаек оргтехника">Не работаек оргтехника</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col">
+                                <label for="critical">Укажите критичность</label>
+                                <select id="critical" class="form-control apply-data" name="criticality">
+                                    <option value="1">Не очень критично</option>
+                                    <option value="2">Критично</option>
+                                    <option value="3">Очень критично</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="address">Укажите место нахождения неисправного оборудования / ПО</label>
+                                <input type="text" id="address" class="form-control apply-data" name="address" placeholder="Зиповская 5, корпус 1, 119 кабинет, 24 компьютер" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="description">Опишите подробно проблему</label>
+                                <textarea id="description" name="description" class="form-control apply-data" rows="5" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row text-right">
+                            <div class="col">
+                                <button type="submit" role="button" class="btn btn-outline-dark btn-lg">Подать заявку</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-5 ml-5 mr-5">
+                <div class="col">
+                    <div class="collapse" id="apply-true">
+                        <div class="card card-body text-center border-0">
+                            <i class="far fa-check-circle"></i>
+                            <p>Ваша заявка успешно отправлена!</p>
+                            <p>Проверить состаяния заявки вы можите в раздели "Заявки / Мои заявки"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 ml-5 mr-5">
+                <div class="col">
+                    <div class="collapse" id="apply-false">
+                        <div class="card card-body text-center border-0">
+                            <i class="far fa-times-circle"></i>
+                            <p>По какойто причине произошла ошибка!</p>
+                            <p>Прозьба, в этом не винить разрабочиков!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="../../../js/class/ajax.js"></script>
+<script src="../../../js/class/left_nav.js"></script>
+<script src="../../../js/apply/script.js"></script>
+</body>
+</html>

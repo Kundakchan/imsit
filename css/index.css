@@ -1,0 +1,76 @@
+body{
+    background-image: url("../images/background_registration.jpg");
+    background-size: cover;
+}
+.container{
+    margin-top: 10vh;
+}
+.registration-tiles{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+}
+.form-control{
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-bottom: black solid 1px;
+    border-radius: initial;
+    margin: 0;
+}
+#submit-registration, #submit-authorization{
+    margin-top: 30px;
+    padding: 10px 50px;
+
+}
+.form-group{
+    margin-bottom: 0;
+}
+.btn-group{
+    margin-bottom: 16px;
+}
+
+input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    border-bottom-color: blue;
+}
+input[type="password"]:focus {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    border-bottom-color: blue;
+}
+input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    border-bottom-color: blue;
+}
+i{
+    margin-top: 10px;
+}
+
+#form-authorization{
+    display: none;
+}
+
+#error-message{
+    height: 50px;
+    margin-bottom: 0;
+    vertical-align:middle;
+    display:table-cell;
+    color: red;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #000;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}

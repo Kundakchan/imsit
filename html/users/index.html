@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>IMSIT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/left_nav.css">
+    <link rel="stylesheet" href="../../css/users/style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-2 fixed-top" id="box"></div>
+        <div class="col-2"></div>
+        <div class="col contentt">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-hover users-information">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>ФИО</th>
+                            <th>Email</th>
+                            <th>Логин</th>
+                            <th>Дата</th>
+                            <th>Права</th>
+                            <th>Статус</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" id="modalUsersUpdate" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle">Редактор данных пользователя</h4>
+                <button class="close" type="button" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="col-6">
+                    <form id="edit-user-data">
+                        <div class="form-group">
+                            <label for="user-fio">ФИО</label>
+                            <input type="text" class="form-control" id="user-fio" name="fio" required>
+
+                            <label for="user-email">email</label>
+                            <input type="text" class="form-control" id="user-email" name="email" required>
+
+                            <label for="user-login">Логин</label>
+                            <input type="text" class="form-control" id="user-login" name="login" required>
+
+                            <label for="user-privilege">Права</label>
+                            <select class="form-control" name="privilege" id="user-privilege" required>
+                                <option value="1">Клиент</option>
+                                <option value="1">Тех. Специалист</option>
+                                <option value="1">Администратор</option>
+                            </select>
+
+                            <label for="user-status">ФИО</label>
+                            <select class="form-control" name="privilege" id="user-status" required>
+                                <option value="1">Артивный</option>
+                                <option value="1">Заблокирован</option>
+                            </select>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6">
+
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                    <button form="edit-user-data" type="submit" role="button" class="btn btn-outline-dark">Применить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="../../js/class/ajax.js"></script>
+<script src="../../js/class/left_nav.js"></script>
+<script src="../../js/users/script.js"></script>
+</body>
+</html>

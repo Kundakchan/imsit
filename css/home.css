@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Proxima Nova Thin';
+    src: url('../fonts/ProximaNovaT-Thin.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-size: 24pt;
+    font-family: 'Proxima Nova Thin';
+    font-weight: bold;
+}

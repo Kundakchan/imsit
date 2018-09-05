@@ -1,0 +1,73 @@
+.left-box, .left-box .logo, .left-box .header{
+    padding: 0;
+    margin: 0;
+}
+.left-box{
+    width: 100%;
+    height: 100vh;
+    background-color: #222222;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.left-box .logo{
+    font-weight: bold;
+    font-size: 24pt;
+    color: white;
+}
+
+.left-box .body{
+    margin-top: 50px;
+}
+.left-box .group-1{
+    font-weight: lighter;
+    font-size: 12pt;
+    background-color: #292929;
+    color: white;
+}
+.left-box .group-1:hover{
+    background-color: #3b3b3b;
+}
+.left-box .group-1:active{
+    background-color: #3b3b3b;
+}
+.left-box .group-1:focus{
+    background-color: #3b3b3b;
+}
+.left-box .group-1 i{
+    float: right;
+    font-size: 8pt;
+    transform: rotate(50grad);
+    margin-top: 7px;
+    transition: .2s;
+}
+.left-box .group-1 .icon{
+    transition: .2s;
+    transform: none;
+}
+
+.left-box .group-2{
+    font-weight: lighter;
+    font-size: 12pt;
+    background-color: #383838;
+    color: white;
+    border-left: solid 5px #383838;
+    padding-left: 16px;
+    display: none;
+}
+.left-box .group-2:hover{
+    background-color: #3b3b3b;
+    border-left-color: #222222;
+}
+.left-box .group-2:active{
+    background-color: #3b3b3b;
+}
+.left-box .group-2focus{
+    background-color: #3b3b3b;
+}
+
+.left-box .footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}

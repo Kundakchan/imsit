@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>IMSIT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/left_nav.css">
+    <link rel="stylesheet" href="../../css/account/style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <div class="col-2 fixed-top" id="box"></div>
+        <div class="col-2"></div>
+        <div class="col contentt">
+            <div class="row mt-5">
+                <div class="col-6 user-data">
+                    <table class="table">
+                        <tr>
+                            <td>ID:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ФИО:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>EMAIL:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ЛОГИН:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ПРАВА:</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ДАТА:</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div class="col text-left">
+                            <div class="btn-group" id="box-phone">
+                                <button id="open-delete-phone" name="idPhone" value="default" data-toggle="modal" type="button" class="btn btn-outline-dark btn-sm delPhone">Контактный номер телефона</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only"></span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-divider"></div>
+                                    <a id="open-create-phone" data-toggle="modal" data-target="#modalCreatePhone" class="dropdown-item" href="#">Добавить новый</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col text-right">
+                            <button id="open-modal-user-data" data-toggle="modal" data-target="#modalUserData" class="btn btn-outline-dark btn-sm edit">
+                                Редактировать
+                                <i class="far fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 user-photo">
+                    <div class="row text-center">
+                        <div class="col">
+                            <img class="photo" src="https://pp.userapi.com/c639123/v639123963/41d13/w_TDpsobH4k.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <button class="btn btn-outline-dark btn-sm edit">
+                                Редактировать
+                                <i class="far fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade modal-user-data" id="modalUserData" tabindex="-1" role="dialog" aria-labelledby="modalUserData" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalUserDataTitle">
+                    Редактирования личных данных
+                </h4>
+                <button id="close-modal-user-data" class="close" type="button" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="userDataUpdate">
+                    <div class="form-group">
+                        <label for="fio">ФИО</label>
+                        <input type="text" class="form-control udu" id="fio" name="fio" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control udu" id="email" name="email" required>
+
+                        <label for="login">Логин</label>
+                        <input type="text" class="form-control udu" id="login" name="login" required>
+                    </div>
+
+                    <button id="open-password" class="btn btn-light collapse-password" type="button" data-toggle="collapse" data-target="#updatePassword" aria-expanded="false" aria-controls="updatePassword">Сменить пароль</button>
+                    <div class="collapse" id="updatePassword">
+                        <div class="form-group">
+                            <label for="newPassword_1">Новый пароль</label>
+                            <input type="password" class="form-control udu" id="newPassword_1" name="new_password_1">
+
+                            <label for="newPassword_2">Повторите новый пароль</label>
+                            <input type="password" class="form-control udu" id="newPassword_2" name="new_password_2">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col text-left">
+                    <p class="message-box" id="message-box"></p>
+                </div>
+                <button type="submit" form="userDataUpdate" class="btn btn-outline-dark" id="buttonUserDataUpdate">Сохранить</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="modalCreatePhone" tabindex="-1" role="dialog" aria-labelledby="modalCreatePhone" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    Добавить новый контактдый телефон
+                </h4>
+                <button id="close-create-phone" class="close" type="button" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="createPhone">
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="text" class="form-control input-phone" id="phone" name="phone" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button form="createPhone" type="submit" id="buttonCreatePhone" class="btn btn-outline-dark">Добавить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalDeletePhone" tabindex="-1" role="dialog" aria-labelledby="modalDeletePhone" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    Удаления контактного номера телефона
+                </h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Вы действительно ходите удалить данный номер телефона?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" id="cancelDeletePhone" class="btn btn-outline-dark">Отмена</button>
+                <button type="button" data-dismiss="modal" id="okDeletePhone" class="btn btn-outline-dark">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<script src="../../js/class/ajax.js"></script>
+<script src="../../js/class/left_nav.js"></script>
+<script src="../../js/account/script.js"></script>
+</body>
+</html>

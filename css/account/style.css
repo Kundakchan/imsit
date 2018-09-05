@@ -1,0 +1,61 @@
+.user-data{
+    font-size: 12pt;
+    padding-right: 100px;
+}
+.user-photo{
+    border-left: #dde1e5 solid 1px;
+}
+.photo{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    box-shadow: #ccd0d4 0 0 10px;
+}
+.edit i {
+    margin-left: 10px;
+}
+.edit{
+    margin-top: 30px;
+}
+.user-data button{
+    margin-top: 20px;
+}
+
+#modalUserData, #modalCreatePhone, #modalDeletePhone {
+    font-size: 12pt;
+    font-weight: lighter;
+}
+#modalUserData input, #modalCreatePhone input{
+    border: none;
+    border-radius: initial;
+    border-bottom: solid 1px #cdd3d9;
+}
+
+#modalUserData input:focus, #modalCreatePhone input:focus{
+    box-shadow: none;
+    border-bottom-color: blue;
+}
+
+
+@-webkit-keyframes autofill {
+    to {
+        color: #000;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+.table tr:first-child td{
+    border: none;
+}
+.collapse-password{
+    margin-bottom: 20px;
+}
+
+#open-delete-phone{
+    width: 210px;
+}
